@@ -13,12 +13,8 @@ ENV LC_ALL en_US.UTF-8
 RUN update-locale LANG=en_US.UTF-8
 RUN apt-get -y install postgresql-9.3 postgresql-contrib-9.3 postgresql-9.3-postgis-2.1 postgis binutils libproj-dev gdal-bin
 RUN wget http://download.osgeo.org/geos/geos-3.3.8.tar.bz2
-RUN tar xjf geos-3.3.8.tar.bz2
-RUN cd geos-3.3.8
-RUN ./configure
-RUN make
-RUN sudo make install
-RUN cd ..
+RUN tar xjf geos-3.3.8.tar.bz2; cd geos-3.3.8; ./configure; make; make install
+
 
 
 RUN echo "host    all             all             0.0.0.0/0               md5" >> /etc/postgresql/9.3/main/pg_hba.conf
