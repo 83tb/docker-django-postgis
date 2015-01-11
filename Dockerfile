@@ -11,7 +11,7 @@ RUN apt-get -y upgrade
 RUN locale-gen --no-purge en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 RUN update-locale LANG=en_US.UTF-8
-RUN apt-get -y install build-essential postgresql-9.3 postgresql-contrib-9.3 postgresql-9.3-postgis-2.1 postgis binutils libproj-dev gdal-bin
+RUN apt-get -y install build-essential postgresql-9.3 postgresql-contrib-9.3 postgresql-9.3-postgis-2.1 postgis binutils libproj-dev gdal-bin python
 RUN wget http://download.osgeo.org/geos/geos-3.3.8.tar.bz2
 RUN tar xjf geos-3.3.8.tar.bz2; cd geos-3.3.8; ./configure; make; make install
 
