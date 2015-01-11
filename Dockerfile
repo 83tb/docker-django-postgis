@@ -1,4 +1,4 @@
-FROM ubuntu:utopic
+FROM ubuntu:13.10
 MAINTAINER Kuba Kucharski <kuba@kucharski.it>
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
