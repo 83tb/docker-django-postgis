@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:utopic
 MAINTAINER Kuba Kucharski <kuba@kucharski.it>
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
